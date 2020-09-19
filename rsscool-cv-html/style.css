@@ -1,0 +1,165 @@
+@import 'normalize.css';
+
+/* Common */
+
+/* h1 {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+/* } */ 
+
+.color-style {
+    background-color: #179498;
+    color: #ffffff;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header, .green {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.green {
+    color:  #179498;
+}
+
+.green::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #179498;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+ul {
+    padding: 0 20px;
+    font-weight: 400;
+}
+
+.soft-skills {
+    margin-left: 50px;
+}
+
+.developer-skills {
+    margin-left: 20px;
+}
+/* / Common */
+
+
+.section-author {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.section-author-title {
+    width: 200px;
+    padding: 80px 20px 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.section-author-name__fullname {
+    padding: 30px 0 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #666666;
+}
+
+.section-author-name__appointment {
+    padding: 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+.section-author-photo > img {
+    max-height: 220px;
+}
+
+.section-description {
+    display: flex;
+}
+
+.section-description-aside {
+    padding: 20px;
+    min-width: 200px;
+}
+
+.section-description-main {
+    width: 100%;
+    padding: 20px;
+}
+
+.profile {
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile > p {
+    margin-top: 5px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.social {
+    margin-top: 25px;
+}
+
+.job, .education, .skills {
+    display: flex;
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.job {
+    margin-bottom: 10px;
+}
+.time {
+    margin-left: 50px;
+}
+.place {
+    margin-left: 50px;
+    
+}
+.place > p {
+    margin-top: 5px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
