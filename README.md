@@ -1,1 +1,1 @@
-# rsschool-cv
+https://hellicoppter.github.io/rsschool-cv/cv
