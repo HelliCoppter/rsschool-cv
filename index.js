@@ -5,6 +5,7 @@ const arrAnchor = document.querySelectorAll('.modal-menu > li > a');
 const message = document.querySelector('.message');
 const btnExit = document.querySelector('.btn-exit');
 
+
 function scroll(e) {
     e.preventDefault();
     const target = document.querySelector(`.${e.target.innerHTML.split(' ')[0].toLowerCase()}`);
