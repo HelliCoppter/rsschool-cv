@@ -162,7 +162,7 @@
                     })().then(result => result).catch(() => false);
             
                     if (range) {
-                        for (let i = 0; i < range; i++) {
+                        for (let i = 0; i &lt; range; i++) {
                             const current = await new Promise((resolve) => {
                                 input.read(i, (file) => resolve(file));
                             }).then(result => result).catch(() => false);
