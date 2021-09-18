@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="rsscool-cv-html/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Alexander Fufachev</title>
+</head>
+<body>
+  <div class="wrapper-main">
+      <!-- author -->
+   <header class="section-author wrapper">
+    <div class="section-author-name">
+
+     <div class="burger">
+       <div class="burger__line"></div>
+       <div class="burger__line"></div>
+       <div class="burger__line"></div>
+     </div>
+
+     <div class="modal">
+       <ul class="modal-menu">
+         <li><a href="#">Profile</a></li>
+         <li><a href="#">Job Experience</a></li>
+         <li><a href="#">Education</a></li>
+         <li><a href="#">Code Example</a></li>
+         <li><a href="#">Print Resume</a></li>
+         <li><a href="#">For Reviewers</a></li>
+       </ul>
+     </div>
+
+     <h2 class="section-author-title color-style">Resume</h2>
+     <h3 class="section-author-name__fullname">Alexander Fufachev</h3>
+     <div class="section-author-name__appointment">Frontend Developer</div>
+    </div>
+    <div class="section-author-photo">
+      <img src="rsscool-cv-html/assets/photo.jpeg" alt="my_photo">
+    </div>
+   </header>
+ <!-- / author -->
+
+    <!-- main -->
+    <main class="section-description wrapper">
+
+      <!-- Aside -->
+      <div class="section-description-aside color-style">
+        <div class="description-profile">
+          <h3 class="profile-header header">Profile</h3>
+          <div class="profile">
+            Name
+            <p>Alexander Fufachev</p> 
+          </div>
+          <div class="profile">
+            Date of Birth
+            <p>April 14, 1992</p> 
+          </div>
+          <div class="profile">
+            Address
+            <p>74b Transportnaya Sochi RU</p>  
+          </div>
+          <div class="profile">
+            Phone
+            <p>+7-909-134-48-34</p> 
+          </div>
+          <div class="profile">
+            Email
+            <p>alexfufachev@mail.ru</p> 
+          </div>
+        </div>
+        <div class="social">
+          <div class="social-header header">Social Media</div>
+          <div class="profile">
+            Vk
+            <p>alexfufachev</p> 
+          </div>
+          <div class="profile">
+            Linked In
+            <p>--------</p> 
+          </div>
+        </div>
+      </div>
+      <!-- / Aside -->
+
+      <!-- Main -->
+      <div class="section-description-main">
+        <div class="job-description">
+          <div class="job-header green"> Job Experience</div>
+          <div class="job">
+            <div class="time">2011 - 2015</div>
+            <div class="place">
+              Forotech company, Kirov
+              <p>Project manager</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="time">2014 - 2015</div>
+            <div class="place">
+              KirovKommunProject, Kirov
+              <p>System Admin</p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="time">2019 - 2021</div>
+            <div class="place"> HoReCa, LRG Group, Sochi
+            </div>
+          </div>
+        </div>
+          
+        <div class="education-description">
+          <div class="education-header green">Education</div>
+            <div class="education">
+              <div class="time">2009 - 2015</div>
+              <div class="place"> Vyatka State University, Kirov
+                <p>Engineer</p>
+              </div>
+            </div>
+            <div class="education">
+              <div class="time">2020 - 2021</div>
+              <div class="place"> RS School, Frontend + JavaScript
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="skills-description">
+          <div class="skills-header green">Skills</div>
+          <div class="skills">
+            <div class="soft-skills">
+              Soft skills
+              <ul>
+                <li>Responsible</li>
+                <li>Quickly study</li>
+                <li>Results-focused mindset</li>
+                <li>Conscientiousness</li>
+              </ul>
+            </div>
+            <div class="developer-skills">
+              Developer skills
+              <ul>
+                <li>HTML5, CSS, SCSS, SASS, Pug</li>
+                <li>Gulp, Webpack</li>
+                <li>Javascript, DOM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-example code">
+          <div class="code-example__header green">Code Example</div>
+          <details>
+            <summary>Async Function</summary>
+            <pre>
+              async function solution(input) {
+                const result = [];
+                await (async function stepFunc(input) {
+                    let range = await (() => {
+                        return new Promise((resolve) => {
+                            input.size((size) => resolve(size));
+                        })
+                    })().then(result => result).catch(() => false);
+            
+                    if (range) {
+                        for (let i = 0; i &lt; range; i++) {
+                            const current = await new Promise((resolve) => {
+                                input.read(i, (file) => resolve(file));
+                            }).then(result => result).catch(() => false);
+                            
+                            if (typeof current === 'string') {
+                                if (current !== 'file') {
+                                    result.push(current)
+                                } 
+                            } else if (typeof current === 'object') {
+                                await stepFunc(current);
+                            }
+                        }
+                    }
+                })(input);
+                return result.sort();
+              }
+            </pre>
+          </details>
+        </div>
+      </div>
+    </main>
+    <!-- / main -->
+
+    <!-- footer -->
+    <div class="wrapper">
+      <footer class="footer color-style">
+        <a class="footer-git" href="https://github.com/HelliCoppter">My GitHub</a>
+        <div class="footer-description">
+          Created by Alex Fufachev, 2021
+        </div>
+        <a class="footer-school" href="https://rs.school/"></a> 
+      </footer>
+    </div>
+    <!-- / footer -->
+  </div>
+  <!-- shadow -->
+  <div class="shadow">
+    <div class="message">
+      Уважаемые проверяющие, это сообщение для вас! Некоторые пункты чек-листа не выполнены мною целенаправленно. Например, я не 
+      считаю, что запись видео на ютуб улучшит мои навыки программирования, поэтому можете смело списывать за это баллы! Удачи!
+      <button class="btn-exit">&times;</button>
+    </div>
+  </div>
+  <!-- / shadow -->
+  
+
+  <script src="./index.js"></script>
+</body>
+</html>
