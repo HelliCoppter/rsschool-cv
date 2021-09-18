@@ -6,6 +6,9 @@
     font-family: 'Montserrat', sans-serif;
     /* font-family: 'Open Sans', sans-serif; */
 /* } */ 
+body {
+    position: relative;
+}
 
 h2, h3 {
     margin-block-start: 0;
@@ -17,9 +20,18 @@ h2, h3 {
     color: #ffffff;
 }
 
+a {
+    text-decoration: none;
+}
+.wrapper-main {
+    max-width: 820px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 .wrapper {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .header, .green {
@@ -58,6 +70,9 @@ ul {
     padding: 0 20px;
     font-weight: 400;
 }
+ul > li {
+    margin: 4px 0px;
+}
 
 .soft-skills {
     margin-left: 50px;
@@ -66,15 +81,124 @@ ul {
 .developer-skills {
     margin-left: 20px;
 }
+.shadow {
+    position: fixed;
+    transition: all 0.3s ease-out 0.1s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(25, 25, 25, 0.6);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadow--active {
+    opacity: 1;
+    visibility: visible;
+}
 /* / Common */
 
+/* / modal */
+.modal {
+    /* display: none; */
+    position: absolute;
+    z-index: 20;
+    top: 5px;
+    left: 10px;
+    max-width: 320px;
+    background-color: rgba(16, 30, 75, 0.9);
+    border-radius: 10px;
+    padding: 40px 15px 15px 15px;
+    transition: all 0.3s ease-out;
+    transform: translateX(-115%);
+}
+.modal--show {
+    transform: translateX(0);
+}
+.modal-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.modal-menu > li {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.modal-menu > li > a {
+    color: #fff;
+}
+.message {
+    max-width: 250px;
+    margin: 10px 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+    position: relative;
+    transition: all 0.5 ease-out;
+    opacity: 0;
+    visibility: hidden;  
+}
+.message--show {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-exit {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    top: 0;
+    right: 0;
+    transform: translate(80%, -80%);
+    background-color: rgba(117, 10, 10, 0.9);
+    border: none;
+    box-shadow: none;
+}
+/* / modal */
+
+.burger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    transition: all 0.3s ease-out;
+    z-index: 100;
+}
+
+.burger__line {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
 
 .section-author {
     display: flex;
     justify-content: space-between;
     
 }
-
+.section-author-name {
+    position: relative;
+}
 .section-author-title {
     width: 200px;
     padding: 80px 20px 20px 20px;
@@ -110,11 +234,9 @@ ul {
 
 .section-description-aside {
     padding: 20px;
-    min-width: 200px;
 }
 
 .section-description-main {
-    width: 100%;
     padding: 20px;
 }
 
@@ -161,11 +283,118 @@ ul {
     font-weight: 400;
     font-size: 12px;
 }
+
+details {
+    margin-top: 30px;
+}
+
+summary {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+pre {
+    font-size: 12px;
+    margin-left: -20px;
+}
+
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 20px;
-    padding: 20px 0;
+    padding: 20px 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    column-gap: 10px;
+}
+
+.footer-git {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-git::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -5px;
+    width: 32px;
+    height: 32px;
+    background-image: url(../rsscool-cv-html/assets/github-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.footer-school {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 90px;
+    height: 20px;
+}
+.footer-school::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -8px;
+    width: 86px;
+    height: 32px;
+    background-image: url(../rsscool-cv-html/assets/rs_school_js.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+@media (max-width: 678px){
+    .time, .place, .soft-skills, summary {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 567px){
+    .section-description {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px){
+    .section-author {
+        flex-direction: column;
+    }
+    .section-author-photo {
+        margin: 10px;
+        text-align: center;
+    }
+    .section-author-title {
+        width: auto;
+    }
+    .footer {
+        flex-direction: column;
+        row-gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .skills {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 679px) {
+    .section-description-aside {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .message {
+        transform: translateY(50%);
+    }
 }
